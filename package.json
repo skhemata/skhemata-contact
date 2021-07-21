@@ -1,0 +1,40 @@
+{
+  "name": "@skhemata/skhemata-contact",
+  "version": "1.1.0",
+  "description": "Skhemata Contact Form Web Component. This web component provides website contact form functionality.",
+  "author": "skhemata-contact",
+  "license": "https://raw.githubusercontent.com/skhemata/skhemata-contact/master/LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skhemata/skhemata-contact.git"
+  },
+  "keywords": [
+    "skhemata",
+    "contact",
+    "web component"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "start": "concurrently --kill-others --names tsc,es-dev-server \"npm run tsc:watch\" \"es-dev-server --app-index demo/index.html --node-resolve --open --watch\"",
+    "tsc:watch": "tsc --watch",
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "tsc",
+    "storybook": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds -c .storybook/server.mjs\"",
+    "storybook:build": "tsc && build-storybook"
+  },
+  "devDependencies": {
+    "@types/node": "13.11.1",
+    "@web/dev-server": "^0.1.17",
+    "@web/dev-server-storybook": "^0.3.6-next.0",
+    "concurrently": "^5.1.0",
+    "es-dev-server": "^1.23.0",
+    "tslib": "^1.11.0",
+    "typescript": "~3.9.0"
+  },
+  "dependencies": {
+    "@skhemata/skhemata-base": "^1.1.0",
+    "@skhemata/skhemata-form": "^1.1.0"
+  }
+}
