@@ -1,5 +1,5 @@
 import { html, TemplateResult } from '@skhemata/skhemata-base';
-import '../src/skhemata-contact.js';
+import '../skhemata-contact.js';
 
 export default {
   title: 'General/SkhemataContact',
