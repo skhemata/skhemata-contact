@@ -11,6 +11,13 @@ export default {
       category: 'HTML Attributes'
     }
   },
+  parameters: {
+    widgetCode: `
+      <skhemata-contact post-url="https://www.devradius.com/api/service/restv1/contact" .title="hello world" post-subtitle="we want to hear from you!"></skhemata-contact>
+
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@skhemata/skhemata-contact@latest/build/index.js"></script> 
+    `,
+  },
 };
 
 interface Story<T> {
