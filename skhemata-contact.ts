@@ -1,3 +1,5 @@
 import { SkhemataContact } from './src/SkhemataContact.js';
 
-window.customElements.define('skhemata-contact', SkhemataContact);
+if (!customElements.get('skhemata-contact')) {
+  window.customElements.define('skhemata-contact', SkhemataContact);
+}
